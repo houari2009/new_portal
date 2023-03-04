@@ -30,11 +30,11 @@ section{
 .form-box{
     position: relative;
     width: 400px;
-    height: 450px;
+    height: 500px;
     background: transparent;
     border: 2px solid #301ddd80;
     border-radius: 20px;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +93,20 @@ button{
     font-size: 1em;
     font-weight: 600;
 }
+.login-card{
+  /* The image used */
+  background-image: url("captiveportal-logo.png");
 
+  /* Control the height of the image */
+  min-height: 150px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  position: relative;
+  padding: 0%;
+}
 
   </style>
 </head>
@@ -105,6 +118,8 @@ button{
 	<div class="form-box">
 		<div class="form-value">
 			<form method="post" action="$PORTAL_ACTION$">
+				<div class="login-card">
+				</div>
 				<h2>Login</h2>
 				<div class="inputbox">
 					<ion-icon name="person-outline"></ion-icon>
