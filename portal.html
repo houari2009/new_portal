@@ -67,11 +67,13 @@
 	  <form name="login_form" method="post" action="$PORTAL_ACTION$">
 		<div class="inputbox">
 			<ion-icon name="person-outline"></ion-icon>
-			<input type="text" name="auth_user" placeholder="User" id="auth_user" autocapitalize="none">
+			<input type="text" name="auth_user" id="auth_user" autocapitalize="none">
+			<label for="">User</label>
 		</div>
 		<div class="inputbox">
 			<ion-icon name="lock-closed-outline"></ion-icon>
-			<input type="password" name="auth_pass" placeholder="Password" id="auth_pass" autocapitalize="none">
+			<input type="password" name="auth_pass" id="auth_pass" autocapitalize="none">
+			<label for="">Password</label>
 		</div>
 		<input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
 		<input type="submit" name="accept" class="login login-submit" value="Login" id="login">
