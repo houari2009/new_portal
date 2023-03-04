@@ -39,9 +39,11 @@
  		<h1></h1>
 	  <form name="login_form" method="post" action="$PORTAL_ACTION$">
 		<div class="inputbox">
+			<ion-icon name="person-outline"></ion-icon>
 			<input type="text" name="auth_user" placeholder="User" id="auth_user" autocapitalize="none">
 		</div>
 		<div class="inputbox">
+			<ion-icon name="lock-closed-outline"></ion-icon>
 			<input type="password" name="auth_pass" placeholder="Password" id="auth_pass" autocapitalize="none">
 		</div>
 		<input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
@@ -49,5 +51,7 @@
 	  </form>
 	</div>
 </div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
