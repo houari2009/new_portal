@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
 
@@ -31,5 +32,155 @@
 	  </form>
 	</div>
 </div>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Rectorat: Authentification Internet</title>
+  <style>
+	  
+
+	  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    
+    background: url('captiveportal-background.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid #301ddd80;
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h2{
+    font-size: 2em;
+    color: #301ddd80;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #301ddd80;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #301ddd80;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #301ddd80;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #301ddd80;
+    font-size: 1.2em;
+    top: 20px;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #301ddd80;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.login-card{
+  /* The image used */
+  background-image: url("captiveportal-logo.png");
+
+  /* Control the height of the image */
+  min-height: 150px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 48%;
+  position: relative;
+  padding: 0%;
+}
+
+  </style>
+</head>
+
+<body>
+
+
+<section>
+	<div class="form-box">
+		<div class="form-value">
+			<form method="post" action="$PORTAL_ACTION$">
+				<div class="login-card">
+				</div>
+				<h2>Login</h2>
+				<div class="inputbox">
+					<ion-icon name="person-outline"></ion-icon>
+					<input type="text" name="auth_user" id="auth_user" autocapitalize="none" required>
+					<label for="">User</label>
+				</div>
+				<div class="inputbox">
+					<ion-icon name="lock-closed-outline"></ion-icon>
+					<input type="password" name="auth_pass" id="auth_pass" autocapitalize="none" required>
+					<label for="">Password</label>
+				</div>
+				<p class="error" id="error">Login failed</p>
+				<button name="accept">Log in</button>
+				
+				<input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+				<input type="hidden" name="accept" class="login login-submit" value="Login" id="login">
+			</form>
+		</div>
+	</div>
+</section>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 </body>
 </html>
